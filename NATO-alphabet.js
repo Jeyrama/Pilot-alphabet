@@ -41,3 +41,5 @@ function to_nato(words) {
   }
   return arr.join(' ');
 }
+
+// or
