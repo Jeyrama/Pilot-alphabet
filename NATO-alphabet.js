@@ -20,3 +20,24 @@ Note:
 
 
 // Solution
+
+let natos = ['Alfa', 'Bravo', 'Charlie',
+'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India',
+'Juliett', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar',
+'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform',
+'Victor', 'Whiskey', 'Xray', 'Yankee', 'Zulu'];
+
+function to_nato(words) {
+  words = words.toLowerCase();
+	let arr = [];
+  for (let i = 0; i < words.length; i++) {
+    if (words.charCodeAt(i) < 97 || words.charCodeAt(i) > 122) {
+      if (words[i] != ' ') {
+        arr.push(words[i]);
+      }
+    } else {
+      arr.push(natos[words.charCodeAt(i) - 97]);
+    }
+  }
+  return arr.join(' ');
+}
