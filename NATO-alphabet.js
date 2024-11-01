@@ -43,3 +43,11 @@ function to_nato(words) {
 }
 
 // or
+
+function toNato(words) {
+  return words
+    .split('')
+    .map(x => /[a-zA-Z]/.test(x) ? NATO[x.toUpperCase()] : x)
+    .filter(x => x != ' ')
+    .join(' ');
+}
